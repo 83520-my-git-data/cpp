@@ -44,7 +44,7 @@ public:
     bool isLeapYear()
     { 
         
-        if( year % 4 || year % 100)
+        if( year % 4)
         {    
             return true;
         }
@@ -73,6 +73,10 @@ int main()
     printf("\nEnter 2 for Accept_Date");
     printf("\n------------------------");
     printf("\nEnter 3 for Display_Date\n");
+    printf("\n------------------------");
+
+    printf("\nEnter 4 for Check_leap_year\n");
+
     printf("\n------------------------\n");
 
     scanf("%d", &choice);
@@ -99,9 +103,9 @@ int main()
         case 4:
             a=d1.isLeapYear();
             if(a)
-                printf("\nleap year\n");
-            else
                 printf("\nNon-leap year\n");
+            else
+                printf("\nLeap year\n");
             break;
 
        default:
